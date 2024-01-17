@@ -112,7 +112,7 @@ export default function Contact() {
                 id="phone"
                 size="30"
                 placeholder="(888)-888-8888"
-                maxlength="16"
+                maxLength="16"
                 onChange={handlePhoneChange}
               />
               <div className="error">{errors.phone}</div>

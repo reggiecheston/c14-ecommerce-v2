@@ -4,18 +4,38 @@ import axios from "axios";
 
 const Shop = () => {
   const [productContent, setProductContent] = useState([]);
+  const [filter, setFilter] = useState("none");
+  const [sort, setSort] = useState("none");
 
   useEffect(() => {
     // Fetch data from server
     axios
-      .get("/products")
+      .get(
+        `http://localhost:3000/shop${
+          filter !== "none" ? "?filter=" + filter : ""
+        }${
+          sort !== "none"
+            ? filter !== "none"
+              ? "&sort=" + sort
+              : "?sort=" + sort
+            : ""
+        }`
+      )
       .then((response) => {
         setProductContent(response.data);
       })
       .catch((error) => {
-        console.error("Error fetching product data: ", error);
+        console.error("Error fetching product data: ", error.response.data);
       });
-  }, []); // Empty dependency array ensures the effect runs once on component mount
+  }, [filter, sort]); // Re-run effect when filter or sort changes
+
+  const handleFilterChange = (e) => {
+    setFilter(e.target.value);
+  };
+
+  const handleSortChange = (e) => {
+    setSort(e.target.value);
+  };
 
   return (
     <div className="main">
@@ -26,21 +46,31 @@ const Shop = () => {
         </div>
         <div className="dropdowns">
           <div className="dropdown">
-            <label for="filter">Filter:</label>
-            <select name="filter" id="filter">
+            <label htmlFor="filter">Filter:</label>
+            <select
+              name="filter"
+              id="filter"
+              onChange={handleFilterChange}
+              value={filter}
+            >
               <option value="none">None</option>
-              <option value="accent-chairs">Accent Chairs</option>
+              <option value="accent chairs">Accent Chairs</option>
               <option value="sofas">Sofas</option>
-              <option value="coffee-tables">Coffee Tables</option>
+              <option value="coffee tables">Coffee Tables</option>
               <option value="lamps">Lamps</option>
             </select>
           </div>
           <div className="dropdown">
-            <label for="sort">Sort:</label>
-            <select name="sort" id="sort">
+            <label htmlFor="sort">Sort:</label>
+            <select
+              name="sort"
+              id="sort"
+              onChange={handleSortChange}
+              value={sort}
+            >
               <option value="none">None</option>
-              <option value="price-low-to-high">Price: Low to High</option>
-              <option value="price-low-to-high">Price: High to Low</option>
+              <option value="price low to high">Price: Low to High</option>
+              <option value="price high to low">Price: High to Low</option>
             </select>
           </div>
         </div>

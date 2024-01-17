@@ -13,10 +13,12 @@ LINKS FOR CAROUSEL
 export default function Home() {
   return (
     <div>
-      <section class="hero-section">
-        <div class="hero-section__text">
-          <h2 class="hero-section__text--header">Simplicity meets luxury</h2>
-          <p class="hero-section__text--copy">
+      <section className="hero-section">
+        <div className="hero-section__text">
+          <h2 className="hero-section__text--header">
+            Simplicity meets luxury
+          </h2>
+          <p className="hero-section__text--copy">
             Scroll to shop our featured collection
           </p>
         </div>

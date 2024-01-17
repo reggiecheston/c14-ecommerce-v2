@@ -42,28 +42,28 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-      <section class={`hamburger-nav ${isMenuOpen ? "open" : ""}`}>
-        <div class="hamburger-nav__bar">
+      <section className={`hamburger-nav ${isMenuOpen ? "open" : ""}`}>
+        <div className="hamburger-nav__bar">
           <img
             src="../assets/icons/wht/close-menu-wht.png"
             alt="close menu"
-            class="close-menu"
+            className="close-menu"
             onClick={closeMenu}
           />
         </div>
-        <nav class="hamburger-nav__menu">
-          <ul class="hamburger-nav__items">
-            <li class="hamburger-nav__item">
+        <nav className="hamburger-nav__menu">
+          <ul className="hamburger-nav__items">
+            <li className="hamburger-nav__item">
               <a href="/" onClick={closeMenu}>
                 Home
               </a>
             </li>
-            <li class="hamburger-nav__item">
+            <li className="hamburger-nav__item">
               <a href="/shop" onClick={closeMenu}>
                 Shop
               </a>
             </li>
-            <li class="hamburger-nav__item">
+            <li className="hamburger-nav__item">
               <a href="/contact" onClick={closeMenu}>
                 Contact
               </a>
