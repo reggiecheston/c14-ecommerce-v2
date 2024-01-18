@@ -92,7 +92,7 @@ export default function Footer() {
               <ul className="main-footer__links">
                 <li className="main-footer__link--header">About</li>
                 <li className="main-footer__link">
-                  <a href="/">Contact</a>
+                  <a href="/contact">Contact</a>
                 </li>
                 <li className="main-footer__link">
                   <a href="/">Careers</a>
