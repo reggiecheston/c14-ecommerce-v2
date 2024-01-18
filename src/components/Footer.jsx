@@ -107,7 +107,7 @@ export default function Footer() {
             </li>
             <li className="main-footer__social-link">
               <a
-                href="https://github.com/reggiecheston/c14-ecommerce"
+                href="https://github.com/reggiecheston/c14-ecommerce-v2"
                 target="_blank"
                 rel="noreferrer"
               >
