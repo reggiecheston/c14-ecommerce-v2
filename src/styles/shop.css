@@ -4,19 +4,65 @@
 }
 
 .heading {
-  margin-top: 7.75rem;
+  /* margin-top: 5.75rem; */
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
+.heading__banner--1 {
+  height: 50vh;
+  width: 100vw;
+  background-image: url(../../public/assets/img/banner/scatto2_divanobianco_gubi_dolomia_0-6-post.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 40%;
+}
+
+.heading__banner--2 {
+  height: 50vh;
+  width: 100vw;
+  background-image: url(../../public/assets/img/banner/GUBI-Pacha-Pierre-Paulin-6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 75%;
+}
+
+.heading__banner--3 {
+  height: 50vh;
+  width: 100vw;
+  background-image: url(../../public/assets/img/banner/Olive-Green-Mario-Bellini-BBItalia-Quick-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 82%;
+}
+
+.heading__banner--4 {
+  height: 50vh;
+  width: 100vw;
+  background-image: url(../../public/assets/img/banner/epic-coffee-table-large-gubi-furniture-30867799081124.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 67%;
+}
+
+.heading__banner--5 {
+  height: 50vh;
+  width: 100vw;
+  background-image: url(../../public/assets/img/banner/limeplasterall.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 70%;
+}
+
 .heading__header {
-  margin-bottom: 4rem;
+  margin: 5rem 0 3rem 0;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .dropdowns {
@@ -82,9 +128,9 @@ h1 {
     min-height: calc(100vh - 9.75rem);
   }
 
-  .heading {
-    margin-top: 9.75rem;
-  }
+  /* .heading {
+    margin-top: 5.75rem;
+  } */
 
   .dropdowns {
     width: 80%;

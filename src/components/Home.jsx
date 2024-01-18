@@ -9,7 +9,7 @@ import "swiper/css/autoplay";
 
 export default function Home() {
   return (
-    <div class="hero-section">
+    <div className="hero-section">
       <Swiper
         modules={[Autoplay, Pagination]}
         pagination={{ clickable: true }}
@@ -19,7 +19,7 @@ export default function Home() {
         loop={true}
       >
         <SwiperSlide>
-          <div class="hero-section__slide" id="slide-1">
+          <div className="hero-section__slide" id="slide-1">
             <div className="hero-section__text">
               <h2 className="hero-section__text--header">
                 Simplicity meets luxury
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="hero-section__slide" id="slide-2">
+          <div className="hero-section__slide" id="slide-2">
             <div className="hero-section__text">
               <h2 className="hero-section__text--header">
                 Pierre Paulin - Pacha Chairs
@@ -44,7 +44,7 @@ export default function Home() {
                 to="/shop"
                 relative="path"
                 className="hero-section__text--copy"
-                state={{ filter: "accent chairs" }}
+                state={{ filter: "Accent Chairs" }}
               >
                 Shop Accent Chairs
               </Link>
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="hero-section__slide" id="slide-3">
+          <div className="hero-section__slide" id="slide-3">
             <div className="hero-section__text">
               <h2 className="hero-section__text--header">
                 Mario Bellini - Modular Sofa
@@ -61,7 +61,7 @@ export default function Home() {
                 to="/shop"
                 relative="path"
                 className="hero-section__text--copy"
-                state={{ filter: "sofas" }}
+                state={{ filter: "Sofas" }}
               >
                 Shop Sofas
               </Link>
@@ -69,7 +69,7 @@ export default function Home() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="hero-section__slide" id="slide-4">
+          <div className="hero-section__slide" id="slide-4">
             <div className="hero-section__text">
               <h2 className="hero-section__text--header">
                 GamFratesi - Epic Coffee Table
@@ -78,7 +78,7 @@ export default function Home() {
                 to="/shop"
                 relative="path"
                 className="hero-section__text--copy"
-                state={{ filter: "coffee tables" }}
+                state={{ filter: "Coffee Tables" }}
               >
                 Shop Coffee Tables
               </Link>
@@ -86,7 +86,7 @@ export default function Home() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="hero-section__slide" id="slide-5">
+          <div className="hero-section__slide" id="slide-5">
             <div className="hero-section__text">
               <h2 className="hero-section__text--header">
                 Ceramicah - Tera Lamp
@@ -95,7 +95,7 @@ export default function Home() {
                 to="/shop"
                 relative="path"
                 className="hero-section__text--copy"
-                state={{ filter: "lamps" }}
+                state={{ filter: "Lamps" }}
               >
                 Shop Lamps
               </Link>

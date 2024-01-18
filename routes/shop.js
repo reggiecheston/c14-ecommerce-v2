@@ -16,7 +16,7 @@ router.get("/shop", async (req, res) => {
     let productsQuery = `SELECT products.*, categories.category_name FROM products
         JOIN categories ON products.category_id = categories.category_id`;
 
-    if (filter) {
+    if (filter !== "None") {
       productsQuery += ` WHERE categories.category_name = '${filter}'`;
     }
 
