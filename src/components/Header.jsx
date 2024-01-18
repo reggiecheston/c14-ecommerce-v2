@@ -28,9 +28,9 @@ export default function Header() {
               </a>
             </li>
             <li className="main-header__navbar--item">
-              <h1 className="main-header__logo">
+              <p className="main-header__logo">
                 <a href="/">humil.</a>
-              </h1>
+              </p>
             </li>
             <li className="main-header__navbar--item">
               <img

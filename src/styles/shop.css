@@ -15,6 +15,10 @@
   margin-bottom: 4rem;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
 .dropdowns {
   display: flex;
   flex-direction: column;
@@ -23,12 +27,14 @@
 }
 
 .dropdown {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #filter,
 #sort {
   width: 8.25rem;
+  border-bottom: 1px black solid;
+  margin-left: 0.5rem;
 }
 
 .grid {
@@ -52,7 +58,6 @@
 
 .grid__item--image {
   max-height: 25rem;
-  max-width: 25rem;
 }
 
 .grid__item--name-price {
@@ -67,6 +72,7 @@
   justify-content: space-between;
   margin: 0.5rem 0;
   font-family: monospace;
+  max-width: 20rem;
 }
 
 /* Media queries */
@@ -90,6 +96,15 @@
 }
 
 @media (min-width: 1025px) {
+  .dropdowns {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .dropdown {
+    margin-left: 3rem;
+  }
+
   .grid {
     grid-template-columns: repeat(3, auto);
   }

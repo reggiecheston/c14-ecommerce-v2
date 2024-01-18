@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "../styles/shop.css";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 const Shop = () => {
   const [productContent, setProductContent] = useState([]);
   const [filter, setFilter] = useState("none");
   const [sort, setSort] = useState("none");
 
+  // Use useLocation to access the passed state
+  const location = useLocation();
   useEffect(() => {
+    // Check if there is state and set the filter accordingly
+    if (location.state && location.state.filter) {
+      setFilter(location.state.filter);
+    }
+
     // Fetch data from server
     axios
       .get(
@@ -42,7 +50,7 @@ const Shop = () => {
       {/* <h1>Shop</h1> */}
       <section className="heading">
         <div className="heading__header">
-          <h2>All Products</h2>
+          <h1>All Products</h1>
         </div>
         <div className="dropdowns">
           <div className="dropdown">
@@ -87,9 +95,7 @@ const Shop = () => {
                 />
               </div>
               <div className="grid__item--name-price">
-                <p>
-                  {product.name} - {product.color}
-                </p>
+                <p>{product.product_name}</p>
                 <p>${product.price}</p>
               </div>
               <div className="grid__item--description">

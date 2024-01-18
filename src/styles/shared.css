@@ -21,13 +21,14 @@
   width: 100vw;
   top: 0;
   height: 5.75rem;
+  z-index: 100;
 }
 
 .main-header__navbar--items {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem;
+  margin: 1.72rem;
 }
 
 .main-header__navbar--item {
@@ -47,6 +48,8 @@
 
 .main-header__logo a {
   color: black;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .hamburger-menu {
