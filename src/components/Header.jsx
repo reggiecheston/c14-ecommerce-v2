@@ -44,12 +44,15 @@ export default function Header() {
       </header>
       <section className={`hamburger-nav ${isMenuOpen ? "open" : ""}`}>
         <div className="hamburger-nav__bar">
-          <img
+          <span className="close-menu" onClick={closeMenu}>
+            &#10005;
+          </span>
+          {/* <img
             src="../assets/icons/wht/close-menu-wht.png"
             alt="close menu"
             className="close-menu"
             onClick={closeMenu}
-          />
+          /> */}
         </div>
         <nav className="hamburger-nav__menu">
           <ul className="hamburger-nav__items">

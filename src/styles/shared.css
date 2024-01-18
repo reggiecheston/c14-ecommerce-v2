@@ -62,9 +62,9 @@
 }
 
 .hamburger-menu-bar {
-  height: 0.05rem;
-  width: 1rem;
-  background-color: black;
+  height: 1px;
+  width: 1.25rem;
+  border: 1px solid black;
 }
 
 .hamburger-nav {
@@ -84,19 +84,21 @@
 
 .hamburger-nav__bar {
   display: flex;
-  margin: 2rem;
+  margin: 1.85rem;
   justify-content: flex-start;
   align-items: center;
   height: 1.8rem;
 }
 
 .close-menu {
-  width: 1rem;
-  height: 1rem;
+  font-size: 1.5rem;
+  color: white;
 }
 
-.close-menu:hover {
+.close-menu:hover,
+.close-menu:active {
   cursor: pointer;
+  color: rgb(161, 161, 161);
 }
 
 .hamburger-nav__items {
@@ -114,6 +116,7 @@
 .hamburger-nav__item a:hover,
 .hamburger-nav__item a:active {
   text-decoration: underline;
+  color: rgb(161, 161, 161);
 }
 
 .open {

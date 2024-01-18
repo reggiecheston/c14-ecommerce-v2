@@ -88,6 +88,9 @@ export default function Footer() {
                 <li className="main-footer__link">
                   <a href="/">FAQ</a>
                 </li>
+                <li className="main-footer__link">
+                  <a href="/"></a>
+                </li>
               </ul>
               <ul className="main-footer__links">
                 <li className="main-footer__link--header">About</li>
@@ -99,6 +102,9 @@ export default function Footer() {
                 </li>
                 <li className="main-footer__link">
                   <a href="/">Privacy Policy</a>
+                </li>
+                <li className="main-footer__link">
+                  <a href="/"></a>
                 </li>
               </ul>
             </div>
