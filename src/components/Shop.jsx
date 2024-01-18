@@ -25,6 +25,7 @@ const Shop = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchData = async () => {
       // Check if there is state and set the filter accordingly
       if (
