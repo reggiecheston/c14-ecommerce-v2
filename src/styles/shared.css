@@ -176,13 +176,16 @@ footer {
   margin-top: 1rem;
 }
 
-.main-footer__link a {
+.main-footer__link a,
+.main-footer__shop-link {
   color: black;
   font-size: 0.75rem;
 }
 
 .main-footer__link a:hover,
-.main-footer__link a:active {
+.main-footer__link a:active,
+.main-footer__shop-link a:hover,
+.main-footer__shop-link a:active {
   text-decoration: underline;
 }
 

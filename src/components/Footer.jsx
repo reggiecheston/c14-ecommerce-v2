@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { validateFooterEmail } from "../utils/formValidation";
+import { Link } from "react-router-dom";
 // import "../scripts/subscribe.js";
 
 export default function Footer() {
@@ -36,13 +37,44 @@ export default function Footer() {
               <ul className="main-footer__links">
                 <li className="main-footer__link--header">Shop</li>
                 <li className="main-footer__link">
-                  <a href="/">Chairs</a>
+                  <Link
+                    to="/shop"
+                    relative="path"
+                    className="main-footer__shop-link"
+                    state={{ filter: "Accent Chairs" }}
+                  >
+                    Accent Chairs
+                  </Link>
                 </li>
                 <li className="main-footer__link">
-                  <a href="/">Sofas</a>
+                  <Link
+                    to="/shop"
+                    relative="path"
+                    className="main-footer__shop-link"
+                    state={{ filter: "Sofas" }}
+                  >
+                    Sofas
+                  </Link>
                 </li>
                 <li className="main-footer__link">
-                  <a href="/">Lighting</a>
+                  <Link
+                    to="/shop"
+                    relative="path"
+                    className="main-footer__shop-link"
+                    state={{ filter: "Coffee Tables" }}
+                  >
+                    Coffee Tables
+                  </Link>
+                </li>
+                <li className="main-footer__link">
+                  <Link
+                    to="/shop"
+                    relative="path"
+                    className="main-footer__shop-link"
+                    state={{ filter: "Lamps" }}
+                  >
+                    Lamps
+                  </Link>
                 </li>
               </ul>
               <ul className="main-footer__links">

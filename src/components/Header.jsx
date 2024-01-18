@@ -21,11 +21,11 @@ export default function Header() {
         <nav className="main-header__navbar">
           <ul className="main-header__navbar--items">
             <li className="main-header__navbar--item">
-              <a href="#" className="hamburger-menu" onClick={openMenu}>
+              <div className="hamburger-menu" onClick={openMenu}>
                 <span className="hamburger-menu-bar"></span>
                 <span className="hamburger-menu-bar"></span>
                 <span className="hamburger-menu-bar"></span>
-              </a>
+              </div>
             </li>
             <li className="main-header__navbar--item">
               <p className="main-header__logo">

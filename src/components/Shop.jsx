@@ -4,8 +4,14 @@ import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Shop = () => {
+  // Use useLocation to access the passed state
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const [productContent, setProductContent] = useState([]);
-  const [filter, setFilter] = useState("None");
+  const [filter, setFilter] = useState(
+    location.state ? location.state.filter : "None"
+  );
   const [sort, setSort] = useState("None");
   const [header, setHeader] = useState("All Products");
   const [bannerClass, setBannerClass] = useState("heading__banner--1");
@@ -17,10 +23,6 @@ const Shop = () => {
     "Coffee Tables": "heading__banner--4",
     Lamps: "heading__banner--5",
   };
-
-  // Use useLocation to access the passed state
-  const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,6 +56,7 @@ const Shop = () => {
           }`
         );
         setProductContent(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching product data: ", error.response.data);
       }
@@ -62,7 +65,8 @@ const Shop = () => {
     fetchData();
   }, [filter, sort, location.state]); // Re-run effect when filter or sort changes
 
-  const handleFilterChange = (e) => {
+  // Make sure this is called before page load
+  const handleFilterChange = async (e) => {
     const selectedFilter = e.target.value;
     setFilter(selectedFilter);
     setBannerClass(banners[selectedFilter]);

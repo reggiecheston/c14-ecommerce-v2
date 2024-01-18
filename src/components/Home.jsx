@@ -28,6 +28,7 @@ export default function Home() {
                 to="/shop"
                 relative="path"
                 className="hero-section__text--copy"
+                state={{ filter: "None" }}
               >
                 Shop All
               </Link>
