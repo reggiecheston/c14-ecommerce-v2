@@ -57,9 +57,9 @@
   },
   "resolve": {
     "fallback": {
-      "path": false,
-      "os": false,
-      "crypto": false
+      "path": "path-browserify",
+      "os": "os-browserify",
+      "crypto": "crypto-browserify"
     }
   },
   "devDependencies": {
