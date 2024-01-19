@@ -50,7 +50,7 @@
   },
   "resolve": {
     "fallback": {
-      "path": "`require.resolve('path-browserify')`"
+      "path": "path-browserify"
     }
   },
   "devDependencies": {
