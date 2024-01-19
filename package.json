@@ -22,6 +22,7 @@
     "swiper": "^11.0.5",
     "web-vitals": "^2.1.4"
   },
+  "heroku-prebuild": "npm install -f",
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
