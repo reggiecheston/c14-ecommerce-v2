@@ -81,6 +81,8 @@ h1 {
   width: 8.25rem;
   border-bottom: 1px black solid;
   margin-left: 0.5rem;
+  border-radius: 0;
+  background-color: transparent;
 }
 
 .grid {
