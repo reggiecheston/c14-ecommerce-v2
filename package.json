@@ -49,9 +49,12 @@
     "npm": "10.2.4"
   },
   "resolve": {
-    "resolve.fallback": { "path": "false" }
+    "fallback": {
+      "path": "require.resolve('path-browserify')"
+    }
   },
   "devDependencies": {
-    "os-browserify": "^0.3.0"
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1"
   }
 }
