@@ -48,6 +48,9 @@
     "node": "20.11.0",
     "npm": "10.2.4"
   },
+  "resolve": {
+    "resolve.fallback": { "path": "false" }
+  },
   "devDependencies": {
     "os-browserify": "^0.3.0"
   }
