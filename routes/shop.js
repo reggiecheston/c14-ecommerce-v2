@@ -30,4 +30,6 @@ router.get("/shop", async (req, res) => {
   }
 });
 
+connection.end();
+
 module.exports = router;
