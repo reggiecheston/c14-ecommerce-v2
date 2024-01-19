@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import "../styles/shop.css";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const Shop = () => {
   // Use useLocation to access the passed state
@@ -46,7 +49,7 @@ const Shop = () => {
       // Fetch data from server
       try {
         const response = await axios.get(
-          `http://localhost:3000/shop${
+          `https://${process.env.JAWSDB_URL}/shop${
             filter !== "none" ? "?filter=" + filter : ""
           }${
             sort !== "none"
