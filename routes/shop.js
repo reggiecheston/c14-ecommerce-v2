@@ -1,14 +1,9 @@
 const mysql = require("mysql2");
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 const express = require("express");
 const router = express.Router();
 
-var pool = mysql.createPool({
-  host: process.env.LOCALHOST,
-  port: process.env.PORT,
-  user: process.env.USERNAME,
-  password: process.env.MYPASSWORD,
-  database: process.env.DATABASE,
-});
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
 router.get("/shop", async (req, res) => {
   try {
@@ -26,7 +21,7 @@ router.get("/shop", async (req, res) => {
       productsQuery += ` ORDER BY products.price DESC`;
     }
 
-    const [result] = await pool.promise().query(productsQuery);
+    const [result] = await connection.promise().query(productsQuery);
 
     res.send(result);
   } catch (error) {
