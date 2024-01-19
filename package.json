@@ -59,7 +59,7 @@
     "fallback": {
       "path": "path-browserify",
       "os": "os-browserify",
-      "crypto": "crypto-browserify"
+      "crypto": false
     }
   },
   "devDependencies": {
