@@ -58,7 +58,8 @@
   "resolve": {
     "fallback": {
       "path": false,
-      "os": false
+      "os": false,
+      "crypto": false
     }
   },
   "devDependencies": {
