@@ -50,8 +50,8 @@
   },
   "resolve": {
     "fallback": {
-      "path": "path-browserify",
-      "os": "os-browserify/browser"
+      "path": false,
+      "os": false
     }
   },
   "devDependencies": {
