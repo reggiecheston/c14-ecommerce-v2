@@ -10,7 +10,7 @@ app.use(cors());
 
 app.use("/", shopRouter);
 
-module.exports = router;
+module.exports = app;
 
 const PORT = process.env.SERVERPORT || 3000;
 
