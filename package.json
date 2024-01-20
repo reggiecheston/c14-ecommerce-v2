@@ -2,6 +2,7 @@
   "name": "c14-e-commerce-v2",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.17.0",
@@ -34,7 +35,7 @@
   },
   "heroku-prebuild": "npm install -f",
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "node server.js",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
