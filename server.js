@@ -8,18 +8,7 @@ const app = express();
 
 app.use(cors());
 
-// router.get("/", (req, res) => {
-//   res.send("hello world");
-// });
-
-// app not router
 app.use("/", shopRouter);
-
-// app.get("*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "/public/index.html"));
-// }); // this helps with a cross origin error, which allows resticted resources on a web page.
-
-// app.get("*", (req, res) => {});
 
 module.exports = router;
 
