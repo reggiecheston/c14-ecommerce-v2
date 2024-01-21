@@ -49,7 +49,7 @@ const Shop = () => {
       // Fetch data from server
       try {
         const response = await axios.get(
-          `${process.env.JAWSDB_URL}/shop${
+          `http://localhost:3001/shop${
             filter !== "none" ? "?filter=" + filter : ""
           }${
             sort !== "none"
