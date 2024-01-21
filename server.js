@@ -12,7 +12,7 @@ app.use("/humil", shopRouter);
 
 module.exports = app;
 
-const PORT = process.env.SERVERPORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 const Timeout = 60000;
 
