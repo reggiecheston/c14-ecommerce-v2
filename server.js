@@ -14,7 +14,7 @@ module.exports = app;
 
 const PORT = process.env.SERVERPORT || 3000;
 
-const Timeout = 30000;
+const Timeout = 60000;
 
 app.timeout = Timeout;
 
