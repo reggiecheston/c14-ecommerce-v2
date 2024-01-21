@@ -2,12 +2,14 @@ const mysql = require("mysql2");
 const express = require("express");
 const router = express.Router();
 
-const connection = await mysql.createConnection({
+const pool = mysql.createPool({
   host: "migae5o25m2psr4q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
   user: "twt71m1gjkxsldwb",
   password: "pudlh8d2d2g1lfqy",
   database: "m9j2buqujw9n6aqn",
-  port: 3306,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
 });
 
 router.get("/shop", async (req, res) => {
@@ -26,7 +28,9 @@ router.get("/shop", async (req, res) => {
       productsQuery += ` ORDER BY products.price DESC`;
     }
 
-    const [result] = await connection.promise().query(productsQuery);
+    const promisePool = pool.promise();
+
+    const [result] = await promisePool.query(productsQuery);
 
     res.send(result);
   } catch (error) {
