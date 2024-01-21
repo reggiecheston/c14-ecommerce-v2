@@ -49,7 +49,7 @@ const Shop = () => {
       // Fetch data from server
       try {
         const response = await axios.get(
-          `https://localhost:3001/api/shop${
+          `https://humil-a8debfc8410b.herokuapp.com/humil/shop${
             filter !== "none" ? "?filter=" + filter : ""
           }${
             sort !== "none"
