@@ -1,15 +1,9 @@
 const mysql = require("mysql2");
 const express = require("express");
 const router = express.Router();
-const pool = mysql.createPool({
-  host: "migae5o25m2psr4q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  user: "twt71m1gjkxsldwb",
-  password: "pudlh8d2d2g1lfqy",
-  database: "m9j2buqujw9n6aqn",
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
-});
+const pool = mysql.createPool(
+  "mysql://twt71m1gjkxsldwb:pudlh8d2d2g1lfqy@migae5o25m2psr4q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/m9j2buqujw9n6aqn"
+);
 
 router.get("/shop", async (req, res) => {
   try {
