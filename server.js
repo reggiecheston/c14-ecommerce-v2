@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors());
 
-app.use("/", shopRouter);
+app.use("/api", shopRouter);
 
 module.exports = app;
 
