@@ -1,9 +1,14 @@
 const mysql = require("mysql2");
-var connection = mysql.createConnection(process.env.JAWSDB_URL);
 const express = require("express");
 const router = express.Router();
 
-var connection = mysql.createConnection(process.env.JAWSDB_URL);
+const connection = await mysql.createConnection({
+  host: "migae5o25m2psr4q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  user: "twt71m1gjkxsldwb",
+  password: "pudlh8d2d2g1lfqy",
+  database: "m9j2buqujw9n6aqn",
+  port: 3306,
+});
 
 router.get("/shop", async (req, res) => {
   try {
