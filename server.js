@@ -2,21 +2,16 @@ const express = require("express");
 const router = express.Router();
 require("dotenv").config();
 const shopRouter = require("./routes/shop");
-const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
+router.use("/shop", shopRouter);
 
-app.use("/humil", shopRouter);
+// app.get("*", (req, res) => {});
 
-module.exports = app;
+module.exports = router;
 
-const PORT = process.env.PORT || 3001;
-
-const Timeout = 60000;
-
-app.timeout = Timeout;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

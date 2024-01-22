@@ -1,9 +1,14 @@
 const mysql = require("mysql2");
 const express = require("express");
 const router = express.Router();
-const pool = mysql.createPool(
-  "mysql://twt71m1gjkxsldwb:pudlh8d2d2g1lfqy@migae5o25m2psr4q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/m9j2buqujw9n6aqn"
-);
+
+var pool = mysql.createPool({
+  host: process.env.LOCALHOST,
+  port: process.env.PORT,
+  user: "root",
+  password: process.env.MYPASSWORD,
+  database: process.env.DATABASE,
+});
 
 router.get("/shop", async (req, res) => {
   try {
@@ -12,25 +17,22 @@ router.get("/shop", async (req, res) => {
         JOIN categories ON products.category_id = categories.category_id`;
 
     if (filter !== "None") {
-      productsQuery += " WHERE categories.category_name = ?";
+      productsQuery += ` WHERE categories.category_name = '${filter}'`;
     }
 
     if (sort === "price low to high") {
-      productsQuery += " ORDER BY products.price ASC";
+      productsQuery += ` ORDER BY products.price ASC`;
     } else if (sort === "price high to low") {
-      productsQuery += " ORDER BY products.price DESC";
+      productsQuery += ` ORDER BY products.price DESC`;
     }
 
-    const promisePool = pool.promise();
-    const [result] = await promisePool.query(productsQuery, [filter]);
+    const [result] = await pool.promise().query(productsQuery);
 
-    res.json(result);
+    res.send(result);
   } catch (error) {
     console.error("Error fetching data: ", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).send("Internal Server Error");
   }
 });
-
-// No need to explicitly end the connection or pool here
 
 module.exports = router;
