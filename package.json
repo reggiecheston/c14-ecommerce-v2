@@ -35,11 +35,11 @@
   },
   "heroku-prebuild": "npm install -f",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-app-rewired start",
     "start-api": "node server.js",
     "dev": "concurrently \"npm run start\" \"npm run start-api\"",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
   },
