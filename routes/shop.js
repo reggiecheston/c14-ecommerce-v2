@@ -3,11 +3,11 @@ const express = require("express");
 const router = express.Router();
 
 var pool = mysql.createPool({
-  host: process.env.HOST,
-  port: process.env.PORT,
+  host: "localhost",
+  port: "3306",
   user: "root",
-  password: process.env.MYPASSWORD,
-  database: process.env.DATABASE,
+  password: "password",
+  database: "humil",
 });
 
 router.get("/shop", async (req, res) => {
