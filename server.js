@@ -5,7 +5,7 @@ const shopRouter = require("./routes/shop");
 
 const app = express();
 
-router.use("/shop", shopRouter);
+app.use("/", shopRouter);
 
 // app.get("*", (req, res) => {});
 
